@@ -7,11 +7,11 @@ const HomeScreen = {
     ${products.map((product) => `
     <li>
         <div class="product">
-            <a href="/product/${product._id}">
+            <a href="/#/product/${product._id}">
                 <img src="${product.image}" alt="${product.name}">
             </a>
         <div class="product-name">
-            <a href="/product/1">
+            <a href="/#/product/1">
                 ${product.name}
             </a>
         </div>
