@@ -7,7 +7,7 @@ const routes = { //routes a oject and "/" is key and "HomeScreen" is a value
     "/product/:id": ProductScreen,
 }
 
-const router = () => {
+const router = async() => {
     const request = parseRequestUrl();
     const parseUrl =
         (request.resource ? `/${request.resource}` : '/') +
@@ -17,7 +17,7 @@ const router = () => {
     const screen = routes[parseUrl] ? routes[parseUrl] : Error404Screen;
 
     const main = document.getElementById("main_container");
-    main.innerHTML = screen.render();
+    main.innerHTML = await screen.render();
 };
 
 window.addEventListener('load', router);
