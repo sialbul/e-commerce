@@ -4,12 +4,17 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "live-server src --verbose",
+        "start": "webpack serve --watch-content-base --open",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "live-server": "^1.2.1"
+        "axios": "^0.21.1"
+    },
+    "devDependencies": {
+        "webpack": "^5.24.2",
+        "webpack-cli": "^4.5.0",
+        "webpack-dev-server": "^3.11.2"
     }
 }
