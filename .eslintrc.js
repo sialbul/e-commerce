@@ -4,7 +4,7 @@ module.exports = {
         node: true,
         es2020: true,
     },
-    extends: ['airbnb-base'],
+    extends: ['airbnb-base', 'prettier'],
     parserOptions: {
         sourceType: 'module',
         ecmaVersion: 11,
@@ -13,7 +13,7 @@ module.exports = {
     rules: {
         indent: [
             'error',
-            4,
+            2,
         ],
         'no-console': [0],
 
@@ -22,8 +22,5 @@ module.exports = {
             'unix',
         ],
         .js text eol = lf,
-
-
     },
-
 };
