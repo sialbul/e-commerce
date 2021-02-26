@@ -8,19 +8,11 @@ module.exports = {
     parserOptions: {
         sourceType: 'module',
         ecmaVersion: 11,
-
     },
     rules: {
-        indent: [
-            'error',
-            2,
-        ],
-        'no-console': [0],
-
-        'linebreak-style': [
-            'error',
-            'unix',
-        ],
-        .js text eol = lf,
+        'no-console': 0,
+        'no-underscore-dangle': 0,
+        'no-nested-ternary': 0,
+        'import/prefer-default-export': 0,
     },
 };
