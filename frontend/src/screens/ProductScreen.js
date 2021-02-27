@@ -17,6 +17,7 @@ const ProductScreen = {
                 if (product.error) {
                     return (`<div>${product.error}</div>`);
                 }
+
                 return `
         <div class="content">
             <div class="back-to-result">
