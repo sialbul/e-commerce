@@ -1,8 +1,9 @@
-import Error404Screen from './screens/Error404Screen.js';
-import HomeScreen from './screens/HomeScreen.js';
-import ProductScreen from './screens/ProductScreen.js';
-import { parseRequestUrl } from './utils.js';
-const routes = { //routes a oject and "/" is key and "HomeScreen" is a value
+import Error404Screen from './screens/Error404Screen';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
+import { parseRequestUrl } from './utils';
+
+const routes = { // routes a oject and "/" is key and "HomeScreen" is a value
     "/": HomeScreen,
     "/product/:id": ProductScreen,
 }
@@ -18,6 +19,7 @@ const router = async() => {
 
     const main = document.getElementById("main_container");
     main.innerHTML = await screen.render();
+    await screen.after_render();
 };
 
 window.addEventListener('load', router);

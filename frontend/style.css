@@ -42,6 +42,14 @@ button.primary {
     width: 100%;
 }
 
+.success {
+    color: #40c040;
+}
+
+.error {
+    color: #c04040;
+}
+
 .grid-container {
     display: grid;
     grid-template-areas: 'header' 'main' 'footer';
@@ -192,8 +200,8 @@ footer {
 }
 
 .details-action {
-    border: 0.1rem gray solid;
+    border: 0.1rem #808080 solid;
     border-radius: 0.5rem;
-    background-color: lightgray;
+    background-color: #f8f8f8;
     padding: 1rem;
 }
