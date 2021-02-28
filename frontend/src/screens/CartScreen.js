@@ -31,7 +31,7 @@ const CartScreen = {
                 }
                 const cartItems = getCartItems();
                 return `
-        <div class="cart">
+        <div class="content cart">
         <div class="cart-list">
             <ul class="cart-list-container">
                 <li> 
@@ -66,10 +66,7 @@ const CartScreen = {
             }
             </ul>
         </div>
-        <div class="cart-list">
-        </div>
-
-        <div class="cart-action">
+            <div class="cart-action">
             <h3>
                 Subtotal (${cartItems.reduce((a, c) => a + c.qty, 0)} items)
                 :
@@ -79,7 +76,6 @@ const CartScreen = {
             Proceed to Checkout
             </button>
         </div>
-        
         </div>
         `;
     },
