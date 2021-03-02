@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+
 import { getProduct } from "../api";
 import { parseRequestUrl, rerender } from "../utils";
 import { getCartItems, setCartItems } from "../localStorage";
@@ -16,10 +18,18 @@ const addToCart = (item, forceUpDate = false) => {
     }
     setCartItems(cartItems);
     if (forceUpDate) {
-        // eslint-disable-next-line no-use-before-define
         rerender(CartScreen);
     }
 };
+
+const removeFromCart = (id) => {
+    setCartItems(getCartItems().filter((x) => x.product !== id));
+    if (id === parseRequestUrl().id) {
+        document.location.hash = '/cart';
+    } else {
+        rerender(CartScreen);
+    }
+}
 const CartScreen = {
         after_render: () => {
             const qtySelects = document.getElementsByClassName("qty-select");
@@ -27,6 +37,13 @@ const CartScreen = {
                 qtySelect.addEventListener('change', (e) => {
                     const item = getCartItems().find((x) => x.product === qtySelect.id);
                     addToCart({...item, qty: Number(e.target.value) }, true);
+
+                });
+            })
+            const deleteButtons = document.getElementsByClassName("delete-button");
+            Array.from(deleteButtons).forEach((deleteButton) => {
+                deleteButton.addEventListener('click', () => {
+                    removeFromCart(deleteButton.id);
 
                 });
             })
@@ -54,7 +71,7 @@ const CartScreen = {
                     <h3> Shopping Cart </h3>
                     <div>Price</div>
                 </li>
-                ${cartItems.length === 0 ? '<div>Cart is empth.<a href="/#/">Go Shopping</a></div>' :
+                ${cartItems.length === 0 ? '<div>Cart is empty.<a href="/#/">Go Shopping</a></div>' :
                 cartItems.map(item => `
                 <li>
                     <div class="cart-image">
