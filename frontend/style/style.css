@@ -20,7 +20,7 @@
   margin: 1rem;
   margin-bottom: 0;
   height: 42rem;
-  border-top: 0.2rem gray solid;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.34);
 }
 
 .product {
@@ -73,7 +73,8 @@ body {
   height: 100vh;
   font: 1.6rem Helvetica, Arial;
   margin: 0;
-  background: radial-gradient(#e1dddd, #6b6c6c5f);
+  background: radial-gradient(#7bc7c75f, #e1dddd);
+  font-family: 'Nunito', sans-serif;
 }
 
 a {
@@ -82,7 +83,7 @@ a {
 }
 
 a:hover {
-  color: orange;
+  color: #EC8C48;
 }
 
 button {
@@ -122,14 +123,14 @@ button.primary {
   -ms-grid-rows: 5rem 1fr 5rem;
       grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
+  margin: auto;
 }
 
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
-  background-color: #203040;
-  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.449);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,26 +141,50 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+  height: 8rem;
+  margin-bottom: 2px;
 }
 
-header a {
-  color: #ffffff;
+nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+
+nav ul {
+  display: inline-block;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
   text-decoration: none;
   padding-right: 1rem;
 }
 
-header a:hover {
-  color: orange;
+nav a:hover {
+  color: #EC8C48;
 }
 
 .brand a {
   font-weight: bold;
-  font-size: 3rem;
   padding-left: 1rem;
 }
 
+.brand a img {
+  width: 10rem;
+  height: 8rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 footer {
-  background-color: #203040;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,7 +194,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.449);
 }
 
 /*Rating*/

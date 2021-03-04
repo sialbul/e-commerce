@@ -20,7 +20,7 @@
   margin: 1rem;
   margin-bottom: 0;
   height: 42rem;
-  border-top: 0.2rem gray solid;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.34);
 }
 
 .product {

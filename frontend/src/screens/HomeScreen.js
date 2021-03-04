@@ -1,6 +1,6 @@
 const HomeScreen = {
 
-    render: () => `<div>Bla</div>`,
+    render: () => `<div></div>`,
 };
 
 
