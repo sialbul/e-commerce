@@ -73,6 +73,7 @@ body {
   height: 100vh;
   font: 1.6rem Helvetica, Arial;
   margin: 0;
+  background: radial-gradient(#e1dddd, #6b6c6c5f);
 }
 
 a {
@@ -210,6 +211,8 @@ footer {
 .details-image img {
   max-width: 60rem;
   width: 100%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .details-info,

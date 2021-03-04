@@ -2,10 +2,12 @@ import CartScreen from './screens/CartScreen';
 import Error404Screen from './screens/Error404Screen';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
+import ProductsScreen from './screens/ProductsScreen';
 import { parseRequestUrl } from './utils';
 
 const routes = { // routes a oject and "/" is key and "HomeScreen" is a value
     "/": HomeScreen,
+    "/products": ProductsScreen,
     "/product/:id": ProductScreen,
     "/cart/:id": CartScreen,
     "/cart": CartScreen,
