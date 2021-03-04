@@ -11,6 +11,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 .products li {
@@ -21,6 +22,7 @@
   margin-bottom: 0;
   height: 42rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+  background-color: #ececec;
 }
 
 .product {
@@ -39,7 +41,11 @@
 .product img {
   max-height: 26rem;
   max-width: 22rem;
-  margin-top: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .product-name {
@@ -73,7 +79,7 @@ body {
   height: 100vh;
   font: 1.6rem Helvetica, Arial;
   margin: 0;
-  background: radial-gradient(#7bc7c75f, #e1dddd);
+  background-color: #ffffff;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -84,6 +90,7 @@ a {
 
 a:hover {
   color: #EC8C48;
+  font-weight: bold;
 }
 
 button {
@@ -126,6 +133,10 @@ button.primary {
   margin: auto;
 }
 
+#main_container {
+  margin-top: 60px;
+}
+
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -143,7 +154,6 @@ header {
   padding: 0.5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.34);
   height: 8rem;
-  margin-bottom: 2px;
 }
 
 nav {
@@ -170,6 +180,7 @@ nav a {
 
 nav a:hover {
   color: #EC8C48;
+  font-weight: bold;
 }
 
 .brand a {
@@ -194,7 +205,11 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5rem;
   background-color: rgba(255, 255, 255, 0.449);
+  padding: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.34);
+  height: 8rem;
 }
 
 /*Rating*/

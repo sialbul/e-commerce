@@ -7,12 +7,14 @@
     padding: 0;
     margin: 0;
     justify-content: center;
+    text-align: center;
     li {
         flex: 0 1 30rem;
         margin: 1rem;
         margin-bottom: 0;
         height: 42rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+        background-color: #ececec;
     }
 }
 
@@ -24,7 +26,10 @@
     img {
         max-height: 26rem;
         max-width: 22rem;
-        margin-top: 2rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 

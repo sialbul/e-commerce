@@ -11,6 +11,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 .products li {
@@ -21,6 +22,7 @@
   margin-bottom: 0;
   height: 42rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+  background-color: #ececec;
 }
 
 .product {
@@ -39,7 +41,11 @@
 .product img {
   max-height: 26rem;
   max-width: 22rem;
-  margin-top: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .product-name {
