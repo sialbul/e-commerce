@@ -1,4 +1,5 @@
-@import "./product.scss";
+@import "product";
+@import "home";
 $buttonPrimary: #f0c040;
 * {
     box-sizing: border-box;
@@ -57,29 +58,23 @@ button.primary {
     display: grid;
     grid-template-areas: 'header' 'main' 'footer';
     grid-template-columns: 1fr;
-    grid-template-rows: 5rem 1fr 5rem;
+    grid-template-rows: 9rem auto 5rem;
     height: 100%;
     margin: auto;
 }
 
-#main_container {
-    margin-top: 60px;
-}
-
 header {
-    grid-area: header;
-    background-color: rgba(255, 255, 255, 0.449);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.34);
-    height: 8rem;
+    min-height: 11vh;
+    margin-bottom: 2vh;
 }
 
 nav {
-    flex: 1;
-    text-align: right;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     ul {
         display: inline-block;
         list-style: none;

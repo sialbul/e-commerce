@@ -21,7 +21,6 @@
   margin: 1rem;
   margin-bottom: 0;
   height: 42rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.34);
   background-color: #ececec;
 }
 
@@ -63,6 +62,71 @@
 
 .product-price span {
   font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.showcase {
+  display: -ms-grid;
+  display: grid;
+  min-height: 20vh;
+  -ms-grid-columns: 10% (minmax(4rem, 1fr))[3] 10%;
+      grid-template-columns: 10% repeat(3, minmax(4rem, 1fr)) 10%;
+  -ms-grid-rows: 15rem 1fr 15rem;
+      grid-template-rows: 15rem 1fr 15rem;
+}
+
+.showcase h2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.showcase img {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  height: 40vh;
+  width: 40vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.showcase .info {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.showcase .info h3 {
+  padding-bottom: 3rem;
 }
 
 * {
@@ -127,21 +191,21 @@ button.primary {
       grid-template-areas: 'header' 'main' 'footer';
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 5rem 1fr 5rem;
-      grid-template-rows: 5rem 1fr 5rem;
+  -ms-grid-rows: 9rem auto 5rem;
+      grid-template-rows: 9rem auto 5rem;
   height: 100%;
   margin: auto;
 }
 
-#main_container {
-  margin-top: 60px;
+header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+  min-height: 11vh;
+  margin-bottom: 2vh;
 }
 
-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: header;
-  background-color: rgba(255, 255, 255, 0.449);
+nav {
+  width: 80%;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,16 +215,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.34);
-  height: 8rem;
-}
-
-nav {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  text-align: right;
 }
 
 nav ul {
