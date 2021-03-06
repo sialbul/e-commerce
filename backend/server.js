@@ -1,5 +1,7 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+
 import data from './data';
 
 
@@ -19,6 +21,11 @@ app.get('/api/products/:id', (req, res) => {
         });
     }
 });
+
+app.use(express.static(path.join(__dirname, '/../frontend')));
+app.get('*', (req, res) => {
+    res.sendFile(`${__dirname}/../frontend/index.html`);
+})
 
 app.listen(process.env.PORT || 5000, () => {
     console.log('serve at http://localhost:5000');
