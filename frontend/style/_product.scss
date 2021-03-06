@@ -34,15 +34,19 @@
 
 .product-name {
     line-height: 2.2rem;
+    a {
+        color: black;
+    }
 }
 
 .product-brand {
     font-size: 1.2rem;
-    color: darkgray;
+    color: black;
 }
 
 .product-price {
     font-size: 2rem;
+    color: black;
 }
 
 .product-price span {

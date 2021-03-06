@@ -51,13 +51,18 @@
   line-height: 2.2rem;
 }
 
+.product-name a {
+  color: black;
+}
+
 .product-brand {
   font-size: 1.2rem;
-  color: darkgray;
+  color: black;
 }
 
 .product-price {
   font-size: 2rem;
+  color: black;
 }
 
 .product-price span {
@@ -129,6 +134,70 @@ p {
 
 .showcase .info h3 {
   padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+  nav #logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  nav ul li {
+    margin-left: 5rem;
+  }
+  .showcase {
+    -ms-grid-columns: 10% 1fr 10%;
+        grid-template-columns: 10% 1fr 10%;
+  }
+  .showcase img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .showcase img,
+  .showcase h2,
+  .showcase .info {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    text-align: center;
+  }
+  .features {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .features h2 {
+    margin-top: 5rem;
+  }
+  .features .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .features .cards .card {
+    margin: 5rem 0rem;
+  }
+  .soon {
+    overflow: hidden;
+  }
+  .soon img {
+    width: 60%;
+  }
+  .soon h2 {
+    font-size: 5rem;
+    text-align: center;
+  }
+  footer h1 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .features-container {
@@ -207,9 +276,12 @@ footer {
   background: black;
   padding-left: 10%;
   padding-right: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 15rem 1fr 15rem;
+      grid-template-rows: 15rem 1fr 15rem;
+  -ms-grid-columns: 10% (minmax(4rem, 1fr))[3] 10%;
+      grid-template-columns: 10% repeat(3, minmax(4rem, 1fr)) 10%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -219,22 +291,65 @@ footer {
 }
 
 footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3/6;
   list-style: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 footer h1 {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  font-family: "Lobster", sans-serif;
+}
+
+#rights {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.soon {
+  background: radial-gradient(#525252, #131313);
+  min-height: 80vh;
+  position: relative;
+  z-index: 0;
+}
+
+.soon img,
+.soon .circle,
+.soon h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.soon .circle {
+  z-index: -1;
+}
+
+.soon h2 {
+  top: 25%;
+}
+
+.soon img {
+  width: 20vh;
+  height: 20vh;
 }
 
 * {
@@ -251,12 +366,13 @@ body {
   height: 100vh;
   font: 1.6rem Helvetica, Arial;
   margin: 0;
-  background-color: #ffffff;
+  background-color: black;
   font-family: 'Nunito', sans-serif;
+  color: white;
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -306,6 +422,7 @@ button.primary {
 }
 
 header {
+  background: radial-gradient(#525252, #131313);
   border-bottom: 1px solid rgba(0, 0, 0, 0.34);
   min-height: 11vh;
   margin-bottom: 2vh;
@@ -355,23 +472,6 @@ nav a:hover {
   height: 8rem;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 5rem;
-  background-color: rgba(255, 255, 255, 0.449);
-  padding: 0.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.34);
-  height: 8rem;
 }
 
 /*Rating*/

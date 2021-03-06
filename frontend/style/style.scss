@@ -2,6 +2,7 @@
 @import "home";
 @import "features";
 @import "footer";
+@import "soon";
 $buttonPrimary: #f0c040;
 * {
     box-sizing: border-box;
@@ -16,12 +17,13 @@ body {
     height: 100vh;
     font: 1.6rem Helvetica, Arial;
     margin: 0;
-    background-color: #ffffff;
+    background-color: black;
     font-family: 'Nunito', sans-serif;
+    color: white;
 }
 
 a {
-    color: black;
+    color: white;
     text-decoration: none;
     &:hover {
         color: #EC8C48;
@@ -66,6 +68,7 @@ button.primary {
 }
 
 header {
+    background: radial-gradient(#525252, #131313);
     border-bottom: 1px solid rgba(0, 0, 0, 0.34);
     min-height: 11vh;
     margin-bottom: 2vh;
@@ -105,17 +108,15 @@ nav {
     }
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5rem;
-    background-color: rgba(255, 255, 255, 0.449);
-    padding: 0.5rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.34);
-    height: 8rem;
-}
-
+// footer {
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 5rem;
+//     background-color: rgba(255, 255, 255, 0.449);
+//     padding: 0.5rem;
+//     border-top: 1px solid rgba(0, 0, 0, 0.34);
+//     height: 8rem;
+// }
 
 /*Rating*/
 

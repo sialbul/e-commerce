@@ -36,24 +36,29 @@ const HomeScreen = {
       </div>
     </section>
     <img class="wave" src="./images/wave.png" alt="" />
-  </div><section class="soon">
+  </div>
+  <section class="soon">
   <h2>Coming Soon</h2>
-  <img src="./images/product-12.jpg" alt="" />
+  <img  id="footerImage" src="./images/exclusive.png" alt="" />
   <img class="circle" src="./images/circle.png" alt="" />
-</section>
+  </section>
+
 <footer>
-  <h1>Leica 2020</h1>
+  <h1>Shopping@</h1>
   <ul>
     <li>
-      <a href="#"><img src="./images/yt-logo.png" alt="" /></a>
+      <a href=""><img src="./images/yt-logo.png" alt="" /></a>
     </li>
     <li>
-      <a href="#"><img src="./images/twitter-logo.png" alt="" /></a>
+      <a href=""><img src="./images/twitter-logo.png" alt="" /></a>
     </li>
     <li>
-      <a href="#"><img src="./images/instagram-logo.png" alt="" /></a>
+      <a href=""><img src="./images/instagram-logo.png" alt="" /></a>
     </li>
   </ul>
+  <div id="rights">
+  All rights reserved @2021
+  </div>
 </footer>
 
     `,
