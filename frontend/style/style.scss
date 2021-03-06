@@ -108,15 +108,6 @@ nav {
     }
 }
 
-// footer {
-//     display: flex;
-//     justify-content: center;
-//     margin-top: 5rem;
-//     background-color: rgba(255, 255, 255, 0.449);
-//     padding: 0.5rem;
-//     border-top: 1px solid rgba(0, 0, 0, 0.34);
-//     height: 8rem;
-// }
 
 /*Rating*/
 
@@ -124,7 +115,7 @@ nav {
     color: $buttonPrimary;
     font-size: 1.8rem;
     span:last-child {
-        color: #444444;
+        color: white;
         font-size: 1.4rem;
     }
 }
@@ -141,6 +132,7 @@ nav {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin: 2rem 10% 0 10%;
 }
 
 .details-image {
@@ -154,7 +146,7 @@ nav {
 
 .details-info,
 .details-action {
-    flex: 1 1 30rem;
+    flex: 1 2 25rem;
 }
 
 .details-info ul,
@@ -166,6 +158,7 @@ nav {
 .details-info li,
 .details-action li {
     margin-bottom: 1rem;
+    color: black
 }
 
 .details-info h1 {
@@ -173,11 +166,16 @@ nav {
     margin: 0;
 }
 
+.details-info li {
+    color: white;
+}
+
 .details-action {
     border: 0.1rem #808080 solid;
     border-radius: 0.5rem;
     background-color: #f8f8f8;
     padding: 1rem;
+    font-weight: bold;
 }
 
 
@@ -185,12 +183,13 @@ nav {
 
 .cart {
     display: flex;
-    flex-wrap: wrap;
+    margin: 0 10%;
+    flex-shrink: wrap;
     align-items: flex-start;
 }
 
 .cart-list {
-    flex: 3 1 60rem;
+    flex: 2 2 50rem;
 }
 
 .cart-action {
@@ -198,6 +197,11 @@ nav {
     background-color: #f0f0f0;
     border-radius: 0.5rem;
     padding: 1rem;
+    margin-top: 2.5rem;
+    h3 {
+        color: black;
+        font-size: 3vh;
+    }
 }
 
 .cart-list-container {
@@ -216,6 +220,9 @@ nav {
     }
     li:first-child {
         align-items: flex-end;
+    }
+    h3 {
+        font-size: 3vh;
     }
 }
 

@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import CartScreen from './screens/CartScreen';
 import Error404Screen from './screens/Error404Screen';
 import HomeScreen from './screens/HomeScreen';
@@ -25,6 +26,9 @@ const router = async() => {
     const main = document.getElementById("main_container");
     main.innerHTML = await screen.render();
     await screen.after_render();
+    const footer = document.getElementById('foot-footer');
+    footer.innerHTML = await Footer.render();
+    await Footer.after_render();
 };
 
 window.addEventListener('load', router);

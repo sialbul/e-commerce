@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Footer from '../components/Footer';
 import Rating from '../components/Rating';
 
 const ProductsScreen = {
@@ -43,9 +44,11 @@ const ProductsScreen = {
                         </div>
                   </div>
                 </li>
+  
 
-`).join('\n')}
+`).join('\n')} 
 `;
     },
+
 };
 export default ProductsScreen;

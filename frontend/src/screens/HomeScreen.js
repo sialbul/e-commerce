@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 const HomeScreen = {
     render: () =>
         `
@@ -42,25 +44,6 @@ const HomeScreen = {
   <img  id="footerImage" src="./images/exclusive.png" alt="" />
   <img class="circle" src="./images/circle.png" alt="" />
   </section>
-
-<footer>
-  <h1>Shopping@</h1>
-  <ul>
-    <li>
-      <a href=""><img src="./images/yt-logo.png" alt="" /></a>
-    </li>
-    <li>
-      <a href=""><img src="./images/twitter-logo.png" alt="" /></a>
-    </li>
-    <li>
-      <a href=""><img src="./images/instagram-logo.png" alt="" /></a>
-    </li>
-  </ul>
-  <div id="rights">
-  All rights reserved @2021
-  </div>
-</footer>
-
     `,
 
 };
