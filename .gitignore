@@ -1,1 +1,3 @@
 node_modules
+dist/
+frontend/main.js/main.js

@@ -5,6 +5,7 @@
     "main": "server.js",
     "scripts": {
         "start": "nodemon --watch backend --exec babel-node backend/server.js",
+        "build": "babel backend -d dist && cd frontend && npm install && npm run build",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
