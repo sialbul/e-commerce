@@ -493,6 +493,7 @@ nav a:hover {
 
 .content {
   padding: 1rem;
+  margin: 2rem 10% 0 10%;
 }
 
 /* Product Details */
@@ -508,7 +509,6 @@ nav a:hover {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 2rem 10% 0 10%;
 }
 
 .details-image {
