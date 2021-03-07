@@ -1,11 +1,13 @@
 import axios from 'axios';
 import Footer from '../components/Footer';
 import Rating from '../components/Rating';
+import { apiUrl } from '../config';
+
 
 const ProductsScreen = {
         render: async() => {
                 const response = await axios({
-                    url: 'http://localhost:5000/api/products',
+                    url: `${apiUrl}/api/products`,
                     headers: {
                         'Content-Type': 'application/json',
                     },
