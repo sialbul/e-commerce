@@ -3,7 +3,7 @@ import { parseRequestUrl } from '../utils';
 import Rating from '../components/Rating';
 
 const ProductScreen = {
-        after_render: async() => {
+        after_render: () => {
             const request = parseRequestUrl();
             document.getElementById("add-button").addEventListener('click',
                 () => {
